@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Project-local Maven settings. This repo is a standalone training demo, unrelated to the
+  corporate EEM projects, so it resolves dependencies directly from Maven Central instead of
+  the corporate Nexus mirror configured in the machine's global ~/.m2/settings.xml (which
+  proxies public Maven Central anyway, but may be unavailable or lag behind on new artifacts).
+  Picked up automatically via .mvn/maven.config - no need to pass -s manually.
+-->
+<settings>
+</settings>

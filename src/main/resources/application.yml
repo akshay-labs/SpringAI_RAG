@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: rag-demo-app
+  datasource:
+    url: jdbc:mariadb://localhost:3307/ragdb
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:root}
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      chat:
+        options:
+          model: gpt-4o-mini
+      embedding:
+        options:
+          model: text-embedding-3-small
+    vectorstore:
+      mariadb:
+        initialize-schema: true
+        dimensions: 1536
+        distance-type: COSINE
+
+rag:
+  document-paths: classpath:documents/HR-Company-Policy.pdf,classpath:documents/IT-Security-Policy.pdf
+  top-k: 4
+
+logging:
+  level:
+    com.training.ragdemo: DEBUG

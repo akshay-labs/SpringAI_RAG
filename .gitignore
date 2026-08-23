@@ -1,0 +1,10 @@
+target/
+*.class
+.idea/
+*.iml
+.vscode/
+
+rag-demo-ui/node_modules/
+rag-demo-ui/dist/
+
+.mvn/certs/cacerts-with-corp-ca.jks
